@@ -49,6 +49,7 @@ $(document).ready(function() {
       const errors = validator.numberOfInvalids();
       if (errors) {
         alert(`Có ${errors} trường chưa hợp lệ, vui lòng kiểm tra lại.`);
+        validator.errorList[0].element.focus();
       }
     }
   });

@@ -42,23 +42,4 @@ document.addEventListener('DOMContentLoaded', function () {
   startAuto();
 });
 
-//Local Store
-document.addEventListener('DOMContentLoaded', () => {
-  const btnAdd = document.querySelector('.btn-add-cart');
-  btnAdd.addEventListener('click', () => {
-    const productId = 'lenovo1'; // hoặc từ data-id
-    const title = document.querySelector('h1').textContent.trim();
-    const priceText = document.querySelector('.price').textContent;
-    // Xóa ký tự không không phải số/dấu chấm trước khi parse
-    const price = parseFloat(priceText.replace(/[^0-9.]/g, '')) || 0;
 
-    let cart = JSON.parse(localStorage.getItem('cart')) || {};
-    if (cart[productId]) {
-      cart[productId].qty += 1;
-    } else {
-      cart[productId] = { title, price, qty: 1 };
-    }
-    localStorage.setItem('cart', JSON.stringify(cart));
-    alert('Đã thêm vào giỏ hàng!');
-  });
-});

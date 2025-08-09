@@ -426,6 +426,20 @@ body {
 }
 
 /* === Product.html === */
+.thumbnail-list img {
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.2s ease, transform 0.1s ease;
+}
+.thumbnail-list img:hover {
+  opacity: 1;
+}
+.thumbnail-list img.active {
+  outline: 2px solid #2d9cdb; /* viền xanh nổi bật */
+  opacity: 1;
+}
+
+
 .product-detail {
   padding: 60px 0;
 }
@@ -763,6 +777,22 @@ body {
   background: #e53935;
   border: none;
   cursor: pointer;
+}
+
+/* === Error === */
+.input-error {
+  border: 1px solid #e74c3c; /* Viền đỏ báo lỗi */
+}
+
+.input-valid {
+  border: 1px solid #2ecc71; /* Viền xanh khi đúng */
+}
+
+span.error {
+  color: #e74c3c;
+  font-size: 0.9em;
+  margin-top: 2px;
+  display: block;
 }
 
 /* === RESPONSIVE === */
